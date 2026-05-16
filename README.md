@@ -1,6 +1,6 @@
-# Ecommify - Diseño de Base de Datos Híbrida (PostgreSQL + MongoDB)
+# Ecommify - Diseño Conceptual y logico.
 
-Este repositorio contiene la entrega técnica del **Entregable 1 - Etapa 2** de la asignatura de Optimización de Bases de Datos.
+Este repositorio contiene la entrega técnica del **Entregable 1 - Etapa 2** de la asignatura de Diseño y Optimización de Bases de Datos de la Maestria en Arquitectura de software.
 
 ## 👥 Integrantes del Equipo (Grupo 9)
 *   **Abdul Mauricio Reyes Parra**
