@@ -1,0 +1,62 @@
+{
+  "collections": {
+    "product_catalog": {
+      "description": "Almacena la información extendida de los productos y sus reseñas, optimizado para lecturas rápidas.",
+      "schema": {
+        "bsonType": "object",
+        "required": ["product_id", "category", "price"],
+        "properties": {
+          "product_id": {
+            "bsonType": "string",
+            "description": "Referencia al product_id en PostgreSQL"
+          },
+          "title": {
+            "bsonType": "string"
+          },
+          "category": {
+            "bsonType": "string"
+          },
+          "price": {
+            "bsonType": "double"
+          },
+          "dynamic_attributes": {
+            "bsonType": "object",
+            "description": "Atributos dinámicos que varían según la categoría del producto (ej. peso, dimensiones, voltaje, talla, color)."
+          },
+          "reviews": {
+            "bsonType": "array",
+            "description": "Arreglo de documentos embebidos con las reseñas del producto.",
+            "items": {
+              "bsonType": "object",
+              "properties": {
+                "review_id": { "bsonType": "string" },
+                "score": { "bsonType": "int", "minimum": 1, "maximum": 5 },
+                "title": { "bsonType": "string" },
+                "comment": { "bsonType": "string" },
+                "date_created": { "bsonType": "date" }
+              }
+            }
+          },
+          "average_score": {
+            "bsonType": "double"
+          }
+        }
+      }
+    },
+    "user_behavior_logs": {
+      "description": "Almacena los eventos de comportamiento del usuario (analítica).",
+      "schema": {
+        "bsonType": "object",
+        "required": ["event_id", "timestamp", "event_type"],
+        "properties": {
+          "event_id": { "bsonType": "string" },
+          "customer_id": { "bsonType": "string" },
+          "session_id": { "bsonType": "string" },
+          "event_type": { "bsonType": "string", "enum": ["view_product", "add_to_cart", "search"] },
+          "metadata": { "bsonType": "object" },
+          "timestamp": { "bsonType": "date" }
+        }
+      }
+    }
+  }
+}
