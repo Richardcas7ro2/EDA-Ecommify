@@ -4,7 +4,6 @@ Este repositorio contiene la entrega de la actividad 2 de la asignatura de Dise�
 
 ## 👥 Integrantes del Equipo (Grupo 9)
 *   **Abdul Mauricio Reyes Parra**
-*   **Jorge Esteban Triviño Correa**
 *   **Jorge Rolando Maradey Duran**
 *   **Wilmer Ricardo Castro Delgadillo**
 
